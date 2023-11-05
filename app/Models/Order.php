@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use DateTime;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -57,5 +58,11 @@ class Order extends Model
     public function media(): HasMany
     {
         return $this->hasMany(Media::class,'media_id','id');
+    }
+
+    public function getCreatedAtAttribute($value)
+    {
+        // return dateTime($value, 'd M Y ');
+        return date($value,'d M, Y');
     }
 }

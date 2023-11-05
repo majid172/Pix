@@ -15,6 +15,7 @@
     </div>
 </div>
 @stop
+
 <!-- end page title -->
 @section('content')
 <div class="row">
@@ -108,18 +109,35 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>15/01/2020</td>
-                            <td>
-                                <a href="#" class="text-body fw-medium">#SK1235</a>
-                            </td>
-                            <td>Werner Berlin</td>
-                            <td>$ 125</td>
-                            <td><span class="badge badge-soft-success font-size-12">Paid</span>
-                            </td>
-                            <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                        </tr>
-                        <tr>
+                            @forelse ($orders as $item)
+                            <tr>
+                                <td>15/01/2020</td>
+                                <td>
+                                    <a href="#" class="text-body fw-medium">#{{$item->order_id}}</a>
+                                </td>
+                                @dd($item->created_at)
+                                <td>Werner Berlin</td>
+                                <td>${{$item->price}} </td>
+                                <td>
+                                    @if ($item->is_paid == 1)
+                                    <span class="badge badge-soft-success font-size-12">Paid</span>
+                                    @else <span class="badge badge-soft-danger font-size-12">Unpaid</span>
+                                    @endif
+                                    
+                                </td>
+                                <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
+                            </tr>
+                            @empty
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            @endforelse
+                                
+                           
+                       
+                        {{-- <tr>
                             <td>16/01/2020</td>
                             <td>
                                 <a href="#" class="text-body fw-medium">#SK1236</a>
@@ -151,7 +169,7 @@
                             <td><span class="badge badge-soft-warning font-size-12">Refund</span>
                             </td>
                             <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                        </tr>
+                        </tr> --}}
                         </tbody>
                     </table>
                 </div>

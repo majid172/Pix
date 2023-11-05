@@ -34,7 +34,9 @@ class UserHomeController extends Controller
             $this->guard()->logout();
             return redirect('login')->with('success', 'Successfully verified your email. Now your profile is under review. Once complete you will get a confirmation email.');
         }
-        return view('user.dashboard');
+        $data['orders']  = Order::latest()->get();
+        
+        return view('user.dashboard',$data);
     }
 
     /**
