@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-6 pb-3">
+                        <div class="col-8 pb-3">
                             <div class="row">
                                 <div class="col-3">
                                     <div class="align-center" style="background:#eaeaea;">
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 pb-3">
+                        <div class="col-4 pb-3">
                             @php
                                 $status = '';
                                 if($order_details->status ==="In Review"){
@@ -86,7 +86,7 @@
                             @endphp
                         </div>
                         <hr/>
-                        <div class="col-7">
+                        <div class="col-12">
                             <!-- Nav tabs -->
                             <ul class="nav nav-pills nav-justified gap-3" role="tablist">
                                 <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">

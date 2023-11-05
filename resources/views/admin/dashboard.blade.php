@@ -31,7 +31,7 @@
                             <div class="font-size-16 mt-2">Orders Placed Today</div>
                         </div>
                     </div>
-                    <h4 class="mt-4">2,456</h4>
+                    <h4 class="mt-4">{{count($today_orders)}}</h4>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
                             <div class="font-size-16 mt-2">Total Orders</div>
                         </div>
                     </div>
-                    <h4 class="mt-4">1,368</h4>
+                    <h4 class="mt-4">{{count($total_orders)}}</h4>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                             <div class="font-size-16 mt-2">Unpaid Amount</div>
                         </div>
                     </div>
-                    <h4 class="mt-4">$ 1,368</h4>
+                    <h4 class="mt-4">${{$unpaid_amount}}</h4>
                 </div>
             </div>
         </div>
@@ -100,72 +100,48 @@
                             <thead>
                             <tr>
                                 <th scope="col">Date</th>
-                                <th scope="col">Id no.</th>
-                                <th scope="col">Billing Name</th>
+                                <th scope="col">Order no.</th>
+                                <th scope="col">Job Title</th>
                                 <th scope="col">Amount</th>
-                                <th scope="col" colspan="2">Payment Status</th>
+                                <th scope="col">@lang('Quantity')</th>
+                                <th scope="col" >Payment Status</th>
+                                <th scope="col">@lang('Action')</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>15/01/2020</td>
-                                <td>
-                                    <a href="#" class="text-body fw-medium">#SK1235</a>
-                                </td>
-                                <td>Werner Berlin</td>
-                                <td>$ 125</td>
-                                <td><span class="badge badge-soft-success font-size-12">Paid</span>
-                                </td>
-                                <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                            </tr>
-                            <tr>
-                                <td>16/01/2020</td>
-                                <td>
-                                    <a href="#" class="text-body fw-medium">#SK1236</a>
-                                </td>
-                                <td>Robert Jordan</td>
-                                <td>$ 118</td>
-                                <td><span class="badge badge-soft-danger font-size-12">Chargeback</span>
-                                </td>
-                                <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                            </tr>
-                            <tr>
-                                <td>17/01/2020</td>
-                                <td>
-                                    <a href="#" class="text-body fw-medium">#SK1237</a>
-                                </td>
-                                <td>Daniel Finch</td>
-                                <td>$ 115</td>
-                                <td><span class="badge badge-soft-success font-size-12">Paid</span>
-                                </td>
-                                <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                            </tr>
-                            <tr>
-                                <td>18/01/2020</td>
-                                <td>
-                                    <a href="#" class="text-body fw-medium">#SK1238</a>
-                                </td>
-                                <td>James Hawkins</td>
-                                <td>$ 121</td>
-                                <td><span class="badge badge-soft-warning font-size-12">Refund</span>
-                                </td>
-                                <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                            </tr>
+                                @forelse ($orders as $item)
+                                <tr>
+                                    <td>{{$item->created_at}}</td>
+                                    <td>
+                                        <a href="/order/{{$item->id}}" class="text-body fw-medium">#{{$item->order_id}}</a>
+                                    </td>
+                                    
+                                    <td>{{__($item->job_title)}}</td>
+                                    <td>${{$item->price}} </td>
+                                    <td>{{$item->image_quantity}} </td>
+                                    <td>
+                                        @if ($item->is_paid == 1)
+                                        <span class="badge badge-soft-success font-size-12">@lang('Paid')</span>
+                                        @else <span class="badge badge-soft-danger font-size-12">@lang('Unpaid')</span>
+                                        @endif
+                                        
+                                    </td>
+                                    <td><a href="/order/{{$item->id}}" class="btn btn-primary btn-sm">@lang('View')</a></td>
+                                </tr>
+                                @empty
+                                <tr>
+                                    <td><p>@lang('No Data Found')</p></td>
+                                    
+                                </tr>
+                                @endforelse
+                           
+                            
+                            
                             </tbody>
                         </table>
                     </div>
 
-                    <div class="mt-3">
-                        <ul class="pagination pagination-rounded justify-content-center mb-0">
-                            <li class="page-item">
-                                <a class="page-link" href="#">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
         </div>

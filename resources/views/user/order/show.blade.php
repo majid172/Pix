@@ -233,32 +233,26 @@
                             <div class="card" style="min-height: 113px !important;">
                                 <div class="card-body text-center">
                                     @if($order_details->is_invoiced)
-                                        <div id="day_wrap"
-                                             style="color: #22bcf4; display: inline-block; padding: 20px 5px; background: #eaf0f1; border-radius: 5px; font-weight: 600; border: 1px dashed; margin-right: 10px;height: 105px;text-align: center;">
+                                    <div class="row">
+                                        <div class="col-lg-3 ">
                                             <span class="my-3 font-size-18" id="days"></span>
                                             <h5>Days</h5>
                                         </div>
-                                        <i class="fas fa-angle-left fa-2x" style="color:purple"></i>
-                                        <i class="fas fa-angle-right fa-2x" style="color:purple"></i>
-                                        <div id="day_wrap"
-                                             style="color: #22bcf4; display: inline-block; padding: 20px 5px; background: #eaf0f1; border-radius: 5px; font-weight: 600; border: 1px dashed; margin-right: 10px;height: 105px;text-align: center;">
+                                        <div class="col-lg-3">
                                             <span class="my-3 font-size-18" id="hours"></span>
                                             <h5>Hours</h5>
                                         </div>
-                                        <i class="fas fa-angle-left fa-2x" style="color:purple"></i>
-                                        <i class="fas fa-angle-right fa-2x" style="color:purple"></i>
-                                        <div id="day_wrap"
-                                             style="color: #22bcf4; display: inline-block; padding: 20px 5px; background: #eaf0f1; border-radius: 5px; font-weight: 600; border: 1px dashed; margin-right: 10px;height: 105px;text-align: center;">
+                                        
+                                        <div class="col-lg-3">
                                             <span class="my-3 font-size-18" id="minutes"></span>
                                             <h5>Minutes</h5>
                                         </div>
-                                        <i class="fas fa-angle-left fa-2x" style="color:purple"></i>
-                                        <i class="fas fa-angle-right fa-2x" style="color:purple"></i>
-                                        <div id="day_wrap"
-                                             style="color: #22bcf4; display: inline-block; padding: 20px 5px; background: #eaf0f1; border-radius: 5px; font-weight: 600; border: 1px dashed; margin-right: 10px;height: 105px;text-align: center;">
+                                        <div class="col-lg-3">
                                             <span class="my-3 font-size-18" id="seconds"></span>
                                             <h5>Seconds</h5>
                                         </div>
+                                    </div>
+                                       
                                     @else
                                         <h4 style="color:#f3ad2e">{{__('Yet do not generate any invoice')}}</h4>
                                     @endif

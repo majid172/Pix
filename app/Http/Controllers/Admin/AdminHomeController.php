@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Country;
+use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,12 @@ class AdminHomeController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        
+        $data['orders']  = Order::latest()->limit(5)->get();
+        $data['total_orders']  = Order::latest()->get();
+        $data['unpaid_amount'] = Order::where('is_paid',0)->sum('price');
+        $data['today_orders'] = Order::whereDate('created_at', now()->toDateString())->get();
+        return view('admin.dashboard',$data);
     }
 
     /**
