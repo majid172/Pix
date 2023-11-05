@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\BillingAddress;
+use App\Models\Gateway;
 use App\Models\Invoice;
 use App\Models\Media;
 use App\Models\Order;
@@ -204,8 +205,9 @@ class OrderController extends Controller
         if ($order_details->redo_media_id) {
             $redo_images = Media::whereIn('id', json_decode($order_details->redo_media_id))->get();
         }
+        $gateways = Gateway::where('is_active',1)->get();
         $billing_address = BillingAddress::where('user_id', $order_details->user_id)->first();
-        return view('user.order.show', compact('order_details', 'total_orders', 'total_unpaid', 'selected_services', 'images','redo_images','invoice','bill_from','billing_address'));
+        return view('user.order.show', compact('order_details', 'total_orders', 'total_unpaid', 'selected_services', 'images','redo_images','invoice','bill_from','billing_address','gateways'));
     }
 
     /**

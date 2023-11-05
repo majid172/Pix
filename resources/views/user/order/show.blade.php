@@ -393,25 +393,30 @@
                     <div class="card">
                         <div class="card-body">
                             @if(isset($invoice))
+                            
                                 <div class="invoice-title">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <div class="mb-4">
-                                                <img src="/assets/images/logo-light.png" alt="logo" height="20"/>
+                                        <div class="col-lg-2">
+                                            <div class="mb-2">
+                                                <img src="/assets/images/logo-light.jpeg" alt="logo" height="60px"/>
                                             </div>
                                         </div>
-                                        <div class="col-4">
-                                            <div class="d-flex flex-row">
-                                                <button type="button" class="btn "><i class="fas fa-download fa-1x"></i> {{_('Invoice Download')}}</button>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex flex-row justify-content-center">
+                                                <button type="button" class="btn btn-outline-success mx-3"><i class="fas fa-download fa-1x"></i> {{_('Invoice Download')}}</button>
                                                 @if($order_details->is_invoiced)
-                                                    <button type="button" class="btn btn-sm ms-3 border bg-primary text-white" data-bs-toggle="modal" data-bs-target=".payment" onclick="renderPayPalButton('{{$order_details->price}}','{{ $order_details->id }}','Clipping')">
+                                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                                         <i class="fas fa-wallet"></i> {{_('Make Payment')}}
                                                     </button>
+                                                    
+                                                    {{-- <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target=".payment" onclick="renderPayPalButton('{{$order_details->price}}','{{ $order_details->id }}','Clipping')">
+                                                        <i class="fas fa-wallet"></i> {{_('Make Payment')}}
+                                                    </button> --}}
                                                 @endif
                                             </div>
                                         </div>
-                                        <div class="col-4">
-                                            <h4 class="float-end font-size-16">INVOICE# {{isset($invoice->invoice_id) ? $invoice->invoice_id : ''}}</h4>
+                                        <div class="col-lg-4">
+                                            <h4 class="float-end font-size-16 text-danger">INVOICE# {{isset($invoice->invoice_id) ? $invoice->invoice_id : ''}}</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -630,6 +635,42 @@
         </div>
     </div>
     <!-- end row -->
+
+
+    {{-- payment modal --}}
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary" id="staticBackdropLabel">@lang('Payment')</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="POST">
+                @csrf
+                <div class="modal-body">
+                
+                    <div class="form-group mb-3">
+                        <label for="gateway">@lang('Select Gateway')</label>
+                        <select name="gateway" id="gateway" class="form-control">
+                            @foreach ($gateways as $item)
+                                <option value="{{$item->code}}">{{__($item->name)}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">@lang('Amount')</label>
+                        <input type="number" name="amount" id="amount" min="1" class="form-control">
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">@lang('Pay Now')</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
 @stop
 
 @section('page-script')

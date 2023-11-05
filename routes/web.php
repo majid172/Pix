@@ -13,6 +13,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Admin\InvoiceController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\Payment\StripeController;
 
 //Route::get('/', function () {
 //    return view('auth.login');
@@ -94,6 +95,10 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::resource('order', OrderController::class,['as' => 'home']);
     Route::get('home/order/list',[OrderController::class,'list'])->name('home.order.list');
 
+    Route::controller(StripeController::class)->group(function(){
+        Route::get('stripe','stripe');
+        Route::post('stripe','stripePost')->name('stripe.post');
+    });
     //profile
     Route::get('home/profile',[UserHomeController::class, 'showProfile'])->name('home.profile');
     Route::post('home/profile/update',[UserHomeController::class, 'updateProfile'])->name('home.profile.update');
