@@ -1,0 +1,783 @@
+/*----------------------------------------------
+*
+* [Default Stylesheet]
+*
+* Theme    : Leverage
+* Version  : 2.1
+* Author   : Codings
+* Support  : codings.dev
+*
+----------------------------------------------*/
+
+/*----------------------------------------------
+
+[ALL CONTENTS]
+
+1. Root
+2. Button
+3. Effects
+
+----------------------------------------------*/
+
+/*----------------------------------------------
+1. Root
+----------------------------------------------*/
+
+/* #region Root */
+
+:root {
+    --h1-font: "Default";
+    --h1-size: 3rem;
+    --h1-weight: 600;
+
+    --h2-font: 'Poppins', sans-serif;
+    --h2-size: 2rem;
+    --h2-weight: 600;
+
+    --p-font: 'Poppins', sans-serif;
+    --p-size: 1rem;
+    --p-weight: 400;
+
+    --header-bg-color: #111111;
+    --nav-brand-height: 35px;
+    --nav-item-color: #f5f5f5;
+    --top-nav-item-color: #f5f5f5;
+    --hero-bg-color: #111111;
+    --footer-brand-height: 80px;
+
+    --primary-color: #06275c;
+    /* --primary-color: #ffa041; */
+    --secondary-color: #06275c;
+
+    --white-color: #f9f9f9;
+    --black-color: #040402;
+    --dark-grey-color: #041b41;
+
+    --primary-t-color: #2f323a;
+    --secondary-t-color: #f5f5f5;
+    --primary-p-color: #6f6f6f;
+    --secondary-p-color: #8e8e8e;
+    --primary-b-color: #f5f5f5;
+    --primary-l-color: rgba(0, 0, 0, .25);
+    --secondary-l-color: rgba(255, 255, 255, 0.25);
+
+    --valid-color: #007a4d;
+    --invalid-color: #06275c;
+
+    --primary-bg-color: #f5f5f5;
+    --primary-bg-color-2: #eeeeee;
+    --primary-bg-color-3: #e5e5e5;
+
+    --secondary-bg-color: #040402;
+    --secondary-bg-color-2: #111111;
+    --secondary-bg-color-3: #041b41;
+
+    --card-bg-color: #f5f5f5;
+    --footer-link-color:#bbbbbb;
+    --footer-badge-color: #f8ed4a;
+    --footer-bg-color: #041b41;
+}
+
+/* #endregion Root */
+
+/*----------------------------------------------
+2. Button
+----------------------------------------------*/
+
+/* custom scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color); 
+}
+/* #region Button */
+
+.primary-button,
+.primary-button:visited, .primary-button:active {
+    position: relative;
+    z-index: 2;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    color: var(--primary-b-color);
+    font-weight: 400;
+}
+
+.primary-button:hover, .primary-button:focus {
+    background-color: var(--primary-color);
+    background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    color: var(--primary-b-color);
+}
+
+.dark-button,
+.dark-button:visited, .dark-button:active {
+    position: relative;
+    z-index: 2;
+    padding: 10px 25px;
+    background-color: var(--hero-bg-color);
+    border-radius: 0;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+/* Get Crisp & Sophisticated  */
+.featured-offers {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+
+
+h1 {
+    font-size: 3.5rem;
+    color: #06275c;
+    margin-bottom: 20px;
+}
+
+.school_heading{
+    background: #65b35d ;
+}
+
+.services-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.services-list li {
+    margin-bottom: 10px;
+}
+
+.check i{
+    color: #06275c;
+    font-size: 15px;
+}
+
+/* end */
+.get_start_btn{
+    color: #06275c;
+    border-color: #06275c;
+}
+.get_start_btn:hover{
+    background-color: #06275c;
+    color: white;
+}
+
+.subtitle{
+    padding: 0 250px;
+}
+.list_icon{
+    color: #06275c;
+    padding-right:10px;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+.offers{
+    padding: 80px 0 10px 0;
+}
+.speciality{
+    padding: 20px 0 10px 0;
+}
+.text{
+    color: #06275c;
+}
+
+
+.card-box{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding: 30px 25px;
+    border-radius: 10px;
+    text-align: center;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+
+.card-box:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  .side-box{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding: 30px 25px;
+    border-radius: 10px;
+    text-align: left;
+    background: #f8f9fa;
+    overflow: hidden;
+  }
+  .side-box:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  .side-box .price-text{
+    font-size: 15px;
+  }
+  .side-box .price_free_trial{
+    border: 3px solid #5281cc;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-weight: 600;
+    background: #ffee6b;
+    outline: none;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .side-box .price_free_trial:hover{
+      background: #ffee6b;
+      outline: none;
+      border: none;
+      color: var(--primary-color);;
+  }
+
+
+.icon-img{
+    margin: auto;
+    color: #5C5CDC;
+    width: 20%;
+}
+
+.pricing .icon{
+    width: 25%;
+    height: 25%;
+}
+
+.card-shadow{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    border-radius: 10px;
+    text-align: center;
+    background: #fff;
+}
+
+.card-shadow:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+
+
+  .benefit-card p {
+    font-size:14px;
+    margin-top: -10px;
+  }
+  .benefit-card img{
+    width: 30%;
+
+  }
+.subHeading {
+    background-color: #e8e1f1;
+    color: #034ba8;
+    border: 0;
+    outline: 0;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+  .heading {
+    text-align: center;
+    font-family: sans-serif;
+    color: #666;
+  }
+  .price_box{
+    background: linear-gradient(45deg, #ffa9a9, #64a1e0);
+    color: white;
+
+}
+.heading h3{
+    text-align: center;
+    overflow: hidden;
+    color: #677788;
+    font-size: 28px;
+}
+.heading p{
+  max-width: 30em;
+  margin: 2em auto;
+}
+.paragraph{
+    text-align: justify;
+    font-size: 16px;
+}
+
+.other_service_link{
+    color: #5C5CDC;
+}
+.dark-button:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+}
+
+/* portfolio */
+.jewelary-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* flip */
+.flip-card {
+  perspective: 1000px;
+  min-height: 400px; /* Set a minimum height for the flip card */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0; /* Set the top and left properties to ensure */
+  left: 0; /* the front and back cards are overlaid on each other */
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-front,
+.flip-card-back {
+  /* ... existing styles ... */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  min-height: 400px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Ensure the front card stays on top initially */
+}
+
+.flip-card-front img {
+  object-fit: cover; /* This will ensure the image covers the entire container */
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+.flip-card-back {
+  /* ... existing styles ... */
+  transform: rotateY(-180deg);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-text {
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.flip-card-back {
+  box-sizing: border-box; /* make padding included in the height */
+  background-color: #efecec;
+  color: rgb(134, 126, 126);
+
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.flip-card-back .content-container {
+  padding: 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.jewelary-box img{
+  width: 100%;
+  border-radius: 20px;
+  padding: 5px;
+}
+.jewelary-img1 img{
+width: 180px;
+height: 200px;
+
+}
+.jewelary-img2 img{
+  width: 180px;
+  height: 150px;
+}
+.jewelary-img5 img{
+  height: 230px;
+}
+
+.jewelary-img6 img{
+  height: 230px;
+}
+.jewelary-btn{
+  width: 100%;
+  margin-top: 20px;
+}
+.jewelary-btn a{
+  padding: 10px 20px;
+  background-color: orange; 
+  border-radius: 10%;
+  color: #000;
+}
+
+
+#white-background{
+    background: white;
+}
+.check_img_icon{
+    padding-right: 5px;
+}
+.price{
+    font-size: 30px;
+    padding: 5px 15px;
+}
+
+.price-box{
+    background-color: #21476e;
+}
+.sophisticated {
+    background: linear-gradient(to bottom, #ccdfff, #ffffff);
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:30px;
+}
+.title h3{
+  max-width: 600px;
+  margin: auto;
+}
+
+/* terms and condition */
+.terms_condition {
+  position: sticky;
+  top: 40px;
+  height: 550px;
+  overflow: auto;
+
+}
+
+/* portfolio background */
+    
+
+figure.snip1205 {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.snip1205 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+figure.snip1205 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+figure.snip1205 i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+figure.snip1205 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+figure.snip1205.blue {
+  background-color: #2472a4;
+}
+figure.snip1205.blue i {
+  color: #20638f;
+}
+figure.snip1205.red {
+  background-color: #ab3326;
+}
+figure.snip1205.red i {
+  color: #962d22;
+}
+figure.snip1205.yellow {
+  background-color: #e08e0b;
+}
+figure.snip1205.yellow i {
+  color: #c87f0a;
+}
+figure.snip1205.green {
+  background-color: #229955;
+}
+figure.snip1205.green i {
+  color: #1e8449;
+}
+figure.snip1205.orange {
+  background-color: #d67118;
+}
+figure.snip1205.orange i {
+  color: #bf6516;
+}
+figure.snip1205.navy {
+  background-color: #2b3c4e;
+}
+figure.snip1205.navy i {
+  color: #222f3d;
+}
+figure.snip1205:hover img,
+figure.snip1205.hover img {
+  opacity: 0.3;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+figure.snip1205:hover i,
+figure.snip1205.hover i {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#owl .item {
+  text-align: center; /* Center the content horizontally */
+}
+
+#owl .item img {
+  width: 100px; 
+  display: inline-block; 
+ 
+}
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.footer_link:hover{
+  color:  var(--footer-badge-color) !important;
+}
+  .faq .faq-list {
+    padding: 0 100px;
+  }
+  
+  .faq .faq-list ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .faq .faq-list li+li {
+    margin-top: 15px;
+  }
+  
+  .faq .faq-list li {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .faq .faq-list a {
+    display: block;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 0 30px;
+    color: #e8bc2c;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .faq .faq-list .icon-help {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    left: 20px;
+    color: #073277;
+  }
+  
+  .faq .faq-list .icon-show,
+  .faq .faq-list .icon-close {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .faq .faq-list p {
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+  }
+  
+  .faq .faq-list .icon-show {
+    display: none;
+  }
+  
+  .faq .faq-list a.collapsed {
+    color: #073277;
+    transition: 0.3s;
+  }
+  
+  .faq .faq-list a.collapsed:hover {
+    color: #e8bc2c;
+  }
+  
+  .faq .faq-list a.collapsed .icon-show {
+    display: inline-block;
+  }
+  
+  .faq .faq-list a.collapsed .icon-close {
+    display: none;
+  }
+  
+  @media (max-width: 1200px) {
+    .faq .faq-list {
+      padding: 0;
+    }
+  }
+  
+
+  /* variables */
+
+
+.dark-button:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: 2px;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 0;
+    background-color: inherit;
+}
+
+.dark-button.inherit:after {
+    background-color: inherit;
+}
+
+.dark-button:hover, .dark-button:focus,
+.dark-button:hover:after, .dark-button:focus:after {
+    background-color: var(--primary-color)!important;
+    background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%)!important;;
+    background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%)!important;;
+    color: var(--white-color)!important;;
+}
+
+footer .dark-button {
+    background-color: var(--footer-bg-color);
+}
+
+/* #endregion Button */
+
+/*----------------------------------------------
+3. Effect
+----------------------------------------------*/
+
+/* #region Effect */
+
+.effect-static-text {
+    background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+         background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.effect-static-text i {
+    -webkit-text-fill-color: var(--primary-color);
+}
+
+.effect-motion-text,
+.effect-motion-hover:hover {
+    background-image: linear-gradient(to right, var(--primary-color) 20%, var(--primary-t-color) 40%, var(--primary-t-color) 60%, var(--primary-color) 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+         background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: effect 1s linear infinite;
+    animation: effect 1s linear infinite;
+}
+
+.effect-motion-text i,
+.effect-motion-hover:hover i {
+    -webkit-text-fill-color: var(--primary-color);
+}
+
+.effect-static-bg {
+    background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+}
+
+.effect-motion-bg {
+    background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+    background-size: 200% auto;
+    -webkit-animation: effect 1s linear infinite;
+    animation: effect 1s linear infinite;
+}
+
+/* #endregion Effect */
