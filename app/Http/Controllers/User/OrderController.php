@@ -33,7 +33,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        
+      
         return view('user.order.index');
     }
 
@@ -44,6 +44,7 @@ class OrderController extends Controller
      */
     public function list(Request $request)
     {
+   
         if ($request->ajax()) {
             $url = explode('/', URL::previousPath());
             if (end($url) === 'invoiced') {
@@ -188,6 +189,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
+ 
         $order_details = Order::where('id', $order->id)->first();
         $total_orders = Order::where('id', $order->id)->count();
         $total_unpaid = Order::where(['id' => $order->id, 'is_paid' => 0])->count();

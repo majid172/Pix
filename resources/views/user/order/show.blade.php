@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-6 pb-3">
+                        <div class="col-8 pb-3">
                             <div class="row">
                                 <div class="col-3">
                                     <div class="align-center" style="background:#eaeaea;">
@@ -41,9 +41,9 @@
                                 <div class="col-9">
                                     <h4>{{$order_details->order_id}}</h4>
                                     <p class="text-bold">{{$selected_services[0]->service_name}} {{__('Work')}}</p>
+                                    
                                     <div class="flex flex-row">
-                                        <div
-                                            style="color: #22bcf4; display: inline-block; padding: 5px 11px; background: #eaf0f1; border-radius: 5px; font-weight: 600;border: 1px dashed; margin-right: 10px;">
+                                        <div style="color: #22bcf4; display: inline-block; padding: 5px 11px; background: #eaf0f1; border-radius: 5px; font-weight: 600;border: 1px dashed; margin-right: 10px;">
                                             <i class="fas fa-shopping-cart"></i>
                                             {{$total_orders}}<br/>
                                             {{_('Total Orders')}}
@@ -64,21 +64,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 pb-3">
+                        <div class="col-4 pb-3">
+                        
                             <div class="d-flex flex-column justify-content-between">
                                 <div class="d-flex flex-row justify-content-end">
                                     @php
+                                    
                                         $status = '';
                                         if($order_details->status ==="In Review"){
+                                           
                                             $status = '<span class="float-end" style="padding: 5px 30px; color: white; background-color: #079bc4; border-radius: 5px;">'.$order_details->status.'</span>';
                                         }
                                         elseif ($order_details->status === "Received"){
+                                           
                                             $status = '<span class="float-end" style="padding: 5px 30px; color: white; background-color: #5fac05; border-radius: 5px;">'.$order_details->status.'</span>';
                                         }
                                         elseif ($order_details->status === "Pending"){
                                             $status = '<span class="float-end" style="padding: 5px 30px; color: white; background-color: #9c27b0; border-radius: 5px;">'.$order_details->status.'</span>';
                                         }
                                         elseif ($order_details->status === "Invoiced"){
+                                            
                                             $status = '<span class="float-end" style="padding: 5px 30px; color: white; background-color: #00bcd4; border-radius: 5px;">'.$order_details->status.'</span>';
                                         }
                                         elseif ($order_details->status === "Delivered"){
@@ -154,42 +159,45 @@
                             </div>
                         </div>
                         <hr/>
-                        <div class="col-7">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-pills nav-justified gap-3" role="tablist">
-                                <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
-                                    <a class="nav-link active" data-bs-toggle="tab" href="#overview" role="tab">
-                                        <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                        <span class="d-none d-sm-block">OverView</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
-                                    <a class="nav-link {{isset($invoice) ? '': 'disabled'}}" data-bs-toggle="tab" href="#invoice" role="tab">
-                                        <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                        <span class="d-none d-sm-block">Invoice</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#redo" role="tab">
-                                        <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                        <span class="d-none d-sm-block">Redo</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#chat" role="tab">
-                                        <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                        <span class="d-none d-sm-block">Chat</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#output" role="tab">
-                                        <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
-                                        <span class="d-none d-sm-block">Output</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- Tab panes -->
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-justified gap-3" role="tablist">
+                                    <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#overview" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                            <span class="d-none d-sm-block">OverView</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
+                                        <a class="nav-link {{isset($invoice) ? '': 'disabled'}}" data-bs-toggle="tab" href="#invoice" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                            <span class="d-none d-sm-block">Invoice</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#redo" role="tab">
+                                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                            <span class="d-none d-sm-block">Redo</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#chat" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Chat</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item waves-effect waves-light border border-1 border-primary rounded">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#output" role="tab">
+                                            <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                            <span class="d-none d-sm-block">Output</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -198,26 +206,31 @@
             <div class="tab-content p-3 text-muted">
                 <div class="tab-pane active" id="overview" role="tabpanel">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body">
-                                    <i class="fas fa-image fa-2x text-primary mb-2"></i>
-                                    <h4>{{$order_details->image_quantity}}</h4>
+                                    <div class="d-flex">
+                                        <i class="fas fa-image fa-2x text-primary mb-2 me-2"></i>
+                                        <h4>{{$order_details->image_quantity}}</h4>
+                                    </div>
+                                    
                                     <p class="text-gray-500">{{__('Image Quantity')}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body">
-                                    <i class="fas fa-image fa-2x text-primary mb-2"></i>
-                                    <h4>{{ucfirst($order_details->image_complexity)}}</h4>
+                                    <div class="d-flex">
+                                        <i class="fas fa-image fa-2x text-primary mb-2 me-2"></i>
+                                        <h4>{{ucfirst($order_details->image_complexity)}}</h4>
+                                    </div>
                                     <p class="text-gray-500">{{__('Image Complexity')}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="card" style="height: 148px !important;">
+                        <div class="col-lg-6">
+                            <div class="card" style="min-height: 113px !important;">
                                 <div class="card-body text-center">
                                     @if($order_details->is_invoiced)
                                         <div id="day_wrap"

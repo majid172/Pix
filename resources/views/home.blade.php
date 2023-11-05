@@ -386,7 +386,7 @@
                                     <div class="card-box my-3 p-2" style="background-color: #fff; border-radius: 5px; margin-bottom: 10px;">
                                         <div class="row">
                                             <div class="col-3 py-4">
-                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/cutout.svg')}}" alt="...."style="width:80%">
+                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/image-gallery.png')}}" alt="...."style="width:80%">
                                             </div>
                                             <div class="col-9">
                                                 <div class="featured">
@@ -399,7 +399,7 @@
                                     <div class="card-box my-3 p-2" style="background-color: #fff; border-radius: 5px; margin-bottom: 10px;">
                                         <div class="row">
                                             <div class="col-3 py-4">
-                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/cart.png')}}" alt="...."style="width:80%">
+                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/social.png')}}" alt="...."style="width:80%">
                                             </div>
                                             <div class="col-9">
                                                 <div class="featured">
@@ -412,7 +412,7 @@
                                     <div class="card-box my-3 p-2" style="background-color: #fff; border-radius: 5px; margin-bottom: 10px;">
                                         <div class="row">
                                             <div class="col-3 py-4">
-                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/globe.png')}}" alt="...."style="width:80%">
+                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/ecommerce.png')}}" alt="...."style="width:80%">
                                             </div>
                                             <div class="col-9">
                                                 <div class="featured">
@@ -425,7 +425,7 @@
                                     <div class="card-box my-3 p-2" style="background-color: #fff; border-radius: 5px; margin-bottom: 10px;">
                                         <div class="row">
                                             <div class="col-3 py-4">
-                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/optimization.png')}}" alt="...."style="width:80%">
+                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/performance.png')}}" alt="...."style="width:80%">
                                             </div>
                                             <div class="col-9">
                                                 <div class="featured">
@@ -448,7 +448,7 @@
                                         <div class="row">
 
                                             <div class="col-3 py-4">
-                                                <img src="{{asset('/front-assets/images/service/icon/ecommerce/cutout.svg')}}" alt="...."style="width:80%">
+                                                <img src="{{asset('/front-assets/images/service/icon/photography/photo.png')}}" alt="...."style="width:80%">
                                             </div>
 
                                             <div class="col-9">
@@ -462,7 +462,7 @@
                                     <div class="card-box my-3  p-2" style="background-color: #fff; border-radius: 5px; margin-bottom: 10px;">
                                         <div class="row">
                                             <div class="col-3 py-4">
-                                                <img src="{{asset('/front-assets/images/service/icon/photography/images.png')}}" alt="...."style="width:80%">
+                                                <img src="{{asset('/front-assets/images/service/icon/photography/shirt.png')}}" alt="...."style="width:80%">
                                             </div>
                                             <div class="col-9">
                                                 <div class="featured">
@@ -488,7 +488,7 @@
                                     <div class="card-box p-2" style="background-color: #fff; border-radius: 5px; margin-bottom: 10px;">
                                         <div class="row">
                                             <div class="col-3 py-4">
-                                                <img src="{{asset('/front-assets/images/service/icon/school.svg')}}" alt="...."style="width:80%">
+                                                <img src="{{asset('/front-assets/images/service/icon/photography/school.png')}}" alt="...."style="width:80%">
                                             </div>
                                             <div class="col-9">
                                                 <div class="featured">

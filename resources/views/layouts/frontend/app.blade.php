@@ -12,9 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
-
     <title>Dedicated to Exceeding Expectation || PIX Clipping Ltd</title>
-
     <meta name="description" content="Creative Agency, Portfolio, Corporate, Startup & Technology">
     <meta name="subject" content="Creative Agency, Portfolio, Corporate, Startup & Technology">
     <meta name="author" content="Codings">
@@ -22,7 +20,7 @@
     <!-- ==============================================
     Favicons
     =============================================== -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon')}}">
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
     <link rel="apple-touch-icon" href="{{asset('front-assets/images/apple-touch-icon.png')}}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{asset('front-assets/images/apple-touch-icon-72x72.png')}}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{asset('front-assets/images/apple-touch-icon-114x114.png')}}">
@@ -42,10 +40,10 @@
     <link rel="stylesheet" href="{{asset('front-assets/css/vendor/cookie-notice.min.css')}}">
 
     {{-- owl carousol slider --}}
-    <link rel="stylesheet" href="{{asset('front-assets/css/owl.carousel.css')}}" /> 
-    <link rel="stylesheet" href="{{asset('front-assets/css/owl.carousel.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('front-assets/css/owl.theme.default.css')}}"  />
-    <link rel="stylesheet" href="{{asset('front-assets/css/owl.theme.default.min.css')}}"  />
+    <link rel="stylesheet" href="{{asset('front-assets/css/owl.carousel.css')}}"/> 
+    <link rel="stylesheet" href="{{asset('front-assets/css/owl.carousel.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('front-assets/css/owl.theme.default.css')}}" />
+    <link rel="stylesheet" href="{{asset('front-assets/css/owl.theme.default.min.css')}}"/>
     {{-- fancy box --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <!-- ==============================================
@@ -54,10 +52,6 @@
     <link rel="stylesheet" href="/front-assets/css/default.css">
     <link rel="stylesheet" href="/front-assets/css/theme-orange.css">
     @stack('style')
-
-    <!-- ==============================================
-    Theme Settings
-    =============================================== -->
     <style>
         :root {
             --header-bg-color: #f5f5f5;

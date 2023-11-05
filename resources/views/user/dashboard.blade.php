@@ -29,7 +29,7 @@
                         </span>
                     </div>
                     <div class="flex-1">
-                        <div class="font-size-16 mt-2">Orders Placed Today</div>
+                        <div class="font-size-16 mt-2">Today Orders Placed </div>
                     </div>
                 </div>
                 <h4 class="mt-4">{{count($today_orders)}}</h4>
@@ -46,7 +46,7 @@
                         </span>
                     </div>
                     <div class="flex-1">
-                        <div class="font-size-16 mt-2">Order in Progress</div>
+                        <div class="font-size-16 mt-2">Order Progress</div>
                     </div>
                 </div>
                 <h4 class="mt-4">1,368</h4>
@@ -115,7 +115,7 @@
                             <tr>
                                 <td>{{$item->created_at}}</td>
                                 <td>
-                                    <a href="#" class="text-body fw-medium">#{{$item->order_id}}</a>
+                                    <a href="/order/{{$item->id}}" class="text-body fw-medium">#{{$item->order_id}}</a>
                                 </td>
                                 
                                 <td>{{__($item->job_title)}}</td>
