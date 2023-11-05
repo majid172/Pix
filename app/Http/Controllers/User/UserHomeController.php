@@ -34,12 +34,12 @@ class UserHomeController extends Controller
             $this->guard()->logout();
             return redirect('login')->with('success', 'Successfully verified your email. Now your profile is under review. Once complete you will get a confirmation email.');
         }
+        $query = Order::where('user_id',auth()->user()->id);
         $data['orders']  = Order::where('user_id',auth()->user()->id)->latest()->limit(5)->get();
-        $data['total_orders']  = Order::where('user_id',auth()->user()->id)->latest()->get();
+        $data['total_orders']  = $query->latest()->get();
+        $data['unpaid_amount'] = $query->where('is_paid',0)->sum('price');
      
-        $data['today_orders'] = Order::where(['user_id' => auth()->user()->id])
-                                ->whereDate('created_at', now()->toDateString())
-                                ->get();
+        $data['today_orders'] = $query->whereDate('created_at', now()->toDateString())->get();
     
         return view('user.dashboard',$data);
     }

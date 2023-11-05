@@ -83,7 +83,7 @@
                         <div class="font-size-16 mt-2">Unpaid Amount</div>
                     </div>
                 </div>
-                <h4 class="mt-4">$ 1,368</h4>
+                <h4 class="mt-4">${{$unpaid_amount}}</h4>
             </div>
         </div>
     </div>
