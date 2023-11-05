@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\Notifiable;
+use Carbon\Carbon;
 
 class Order extends Model
 {
@@ -62,7 +63,8 @@ class Order extends Model
 
     public function getCreatedAtAttribute($value)
     {
-        // return dateTime($value, 'd M Y ');
-        return date($value,'d M, Y');
+
+        $carbonDate = Carbon::parse($value);
+        return $carbonDate->format('M d, Y');
     }
 }
