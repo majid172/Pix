@@ -10,12 +10,12 @@ class ProcessController extends Controller
 {
     public static function process($payment)
     {
-        $StripeAcc = json_decode('sk_test_51N3HoVDIjbcv2hIxhY0VFrtOk12C3ZIoohtCDkXA8YPAr15uVJDlGimXdqDSLDhEhrB6gUXqYgWLTxKnexvGrnOt00gDrUJikO');
-        
+        $StripeAcc = json_decode($payment->paymentGateway->parameter);
         $alias = $payment->gateway;
-        
+       
         // $general = gs();
-        \Stripe\Stripe::setApiKey("sk_test_51N3HoVDIjbcv2hIxhY0VFrtOk12C3ZIoohtCDkXA8YPAr15uVJDlGimXdqDSLDhEhrB6gUXqYgWLTxKnexvGrnOt00gDrUJikO");
+        \Stripe\Stripe::setApiKey("$StripeAcc->secret_key");
+
         try {
             $session = \Stripe\Checkout\Session::create([
                 'payment_method_types' => ['card'],
@@ -27,7 +27,7 @@ class ProcessController extends Controller
                             'product_data' => [
                                 'name' => 'PixClipping',
                                 'description' => 'Payment  with Stripe',
-                                'images' => [asset('assets/images/logoIcon/logo.png')],
+                                'images' => [asset('assets/images/logo.png')],
                             ],
                         ],
                         'quantity' => 1,
@@ -58,8 +58,6 @@ class ProcessController extends Controller
         $StripeAcc = Gateway::where('code','stripe')->first();
         dd('ipn');
         $gateway_parameter = json_decode($StripeAcc->gateway_parameter);
-
-
         \Stripe\Stripe::setApiKey($gateway_parameter->secret_key);
 
         // You can find your endpoint's secret in your webhook settings
