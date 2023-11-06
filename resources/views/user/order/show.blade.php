@@ -405,7 +405,7 @@
                                             <div class="d-flex flex-row justify-content-center">
                                                 <button type="button" class="btn btn-outline-success mx-3"><i class="fas fa-download fa-1x"></i> {{_('Invoice Download')}}</button>
                                                 @if($order_details->is_invoiced)
-                                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                    <button type="button" class="btn btn-outline-primary payment" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-price="{{$order_details->price}}">
                                                         <i class="fas fa-wallet"></i> {{_('Make Payment')}}
                                                     </button>
                                                     
@@ -645,10 +645,11 @@
               <h5 class="modal-title text-primary" id="staticBackdropLabel">@lang('Payment')</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="" method="POST">
+            <form action="{{route('home.payment')}}" method="POST">
                 @csrf
                 <div class="modal-body">
-                
+                    <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
+                    <input type="hidden" name="order_id" value="{{$order_details->id}}">
                     <div class="form-group mb-3">
                         <label for="gateway">@lang('Select Gateway')</label>
                         <select name="gateway" id="gateway" class="form-control">
@@ -659,7 +660,7 @@
                     </div>
                     <div class="form-group">
                         <label for="amount">@lang('Amount')</label>
-                        <input type="number" name="amount" id="amount" min="1" class="form-control">
+                        <input type="number" name="amount" id="amount" min="1" class="form-control" readonly>
                     </div>
                 
                 </div>
@@ -670,7 +671,7 @@
             </form>
           </div>
         </div>
-      </div>
+    </div>
 @stop
 
 @section('page-script')
@@ -814,5 +815,13 @@
         $(document).on('click','.image-link-delete-btn',function (){
             $(this).closest('.row').remove()
         })
+    </script>
+
+    <script>
+        $('.payment').on('click',function(){
+            var amount = $(this).data('price');
+            $('#staticBackdrop').find('input[name="amount"]').val(amount);
+
+        });
     </script>
 @stop

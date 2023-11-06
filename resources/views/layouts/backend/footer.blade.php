@@ -62,7 +62,8 @@
 
 <!-- apexcharts -->
 <script src="{!! asset('/assets/libs/apexcharts/apexcharts.min.js') !!}"></script>
-
+{{-- stripe js --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- jquery.vectormap map -->
 <script src="{!! asset('/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js') !!}"></script>
 <script src="{!! asset('/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js') !!}"></script>

@@ -114,4 +114,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(BillingAddress::class);
     }
 
+    public function payment()  {
+        return $this->hasMany(Payment::class);
+    }
+
 }

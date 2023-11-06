@@ -39,6 +39,7 @@ class ComposerStaticInit3c61b8ef77dc0aedebf3f8ff82d16aea
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
         '0b47d6d4a00ca9112ba3953b49e7c9a4' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/helper.php',
+        '8fde5feda9697fe0ee53a3938c839fb0' => __DIR__ . '/../..' . '/app/Helpers/Helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -576,8 +577,11 @@ class ComposerStaticInit3c61b8ef77dc0aedebf3f8ff82d16aea
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/IndexController.php',
         'App\\Http\\Controllers\\MediaController' => __DIR__ . '/../..' . '/app/Http/Controllers/MediaController.php',
+        'App\\Http\\Controllers\\PaymentController' => __DIR__ . '/../..' . '/app/Http/Controllers/PaymentController.php',
+        'App\\Http\\Controllers\\Payment\\StripeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Payment/StripeController.php',
         'App\\Http\\Controllers\\User\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/User/OrderController.php',
         'App\\Http\\Controllers\\User\\UserHomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/User/UserHomeController.php',
+        'App\\Http\\Controllers\\stripe\\ProcessController' => __DIR__ . '/../..' . '/app/Http/Controllers/stripe/ProcessController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckRole' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckRole.php',
@@ -600,6 +604,7 @@ class ComposerStaticInit3c61b8ef77dc0aedebf3f8ff82d16aea
         'App\\Models\\Media' => __DIR__ . '/../..' . '/app/Models/Media.php',
         'App\\Models\\Order' => __DIR__ . '/../..' . '/app/Models/Order.php',
         'App\\Models\\PathServices' => __DIR__ . '/../..' . '/app/Models/PathServices.php',
+        'App\\Models\\Payment' => __DIR__ . '/../..' . '/app/Models/Payment.php',
         'App\\Models\\Permission' => __DIR__ . '/../..' . '/app/Models/Permission.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',

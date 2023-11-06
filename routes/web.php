@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\InvoiceController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Payment\StripeController;
+use App\Http\Controllers\PaymentController;
 
 //Route::get('/', function () {
 //    return view('auth.login');
@@ -95,8 +96,12 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::resource('order', OrderController::class,['as' => 'home']);
     Route::get('home/order/list',[OrderController::class,'list'])->name('home.order.list');
 
+    Route::controller(PaymentController::class)->name('home.')->group(function(){
+        Route::post('home/payment','paymentStore')->name('payment');
+        Route::get('home/paymentConfirm','paymentConfirm')->name('payment.confirm');
+    });
     Route::controller(StripeController::class)->group(function(){
-        Route::get('stripe','stripe');
+        Route::get('stripe','stripe')->name('home.stripe');
         Route::post('stripe','stripePost')->name('stripe.post');
     });
     //profile
