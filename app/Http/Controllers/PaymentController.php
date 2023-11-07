@@ -20,11 +20,7 @@ class PaymentController extends Controller
         $payment->gateway = $request->gateway;
         $payment->amount = $request->amount;
         $payment->trx = rand($min,$max);
-        
         $payment->save();
-
-        $order = Order::find($request->order_id);
-        $order->is_paid = ($order->is_paid == 0) ? 1:0;
         // $order->save();
         session()->put('trx',$payment->trx);
         return to_route('home.payment.confirm');

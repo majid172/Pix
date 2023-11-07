@@ -29,7 +29,7 @@
                         </span>
                     </div>
                     <div class="flex-1">
-                        <div class="font-size-16 mt-2">Today Orders Placed </div>
+                        <div class="font-size-16 mt-2">Today's Order </div>
                     </div>
                 </div>
                 <h4 class="mt-4">{{count($today_orders)}}</h4>

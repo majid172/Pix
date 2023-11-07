@@ -4,6 +4,7 @@ namespace App\Http\Controllers\stripe;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gateway;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class ProcessController extends Controller
@@ -35,7 +36,7 @@ class ProcessController extends Controller
                 ],
                 'mode' => 'payment',
                 'cancel_url' => route('home'),
-                'success_url' => route('home.payment'),
+                'success_url' => route('home'),
                 // 'cancel_url' => route(gatewayRedirectUrl()),
                 // 'success_url' => route(gatewayRedirectUrl(true)),
             ]);
@@ -49,14 +50,16 @@ class ProcessController extends Controller
         $send['session'] = $session;
         $send['StripeJSAcc'] = $StripeAcc;
         // $payment->btc_wallet = json_decode(json_encode($session))->id;
-        $payment->save();
+
+        $order = Order::find($payment->order_id);
+        $order->is_paid = ($order->is_paid == 0) ? 1:0;
+        $order->save();
         return json_encode($send);
     }
 
     public function ipn(Request $request)
     {
         $StripeAcc = Gateway::where('code','stripe')->first();
-        dd('ipn');
         $gateway_parameter = json_decode($StripeAcc->gateway_parameter);
         \Stripe\Stripe::setApiKey($gateway_parameter->secret_key);
 
@@ -85,12 +88,13 @@ class ProcessController extends Controller
 
         // Handle the checkout.session.completed event
         if ($event->type == 'checkout.session.completed') {
-            $session = $event->data->object;
-            $deposit = Deposit::where('btc_wallet', $session->id)->orderBy('id', 'DESC')->first();
 
-            if ($deposit->status == 0) {
-                PaymentController::userDataUpdate($deposit);
-            }
+            $session = $event->data->object;
+            // $payment = Payment::where('btc_wallet', $session->id)->orderBy('id', 'DESC')->first();
+
+            // if ($deposit->status == 0) {
+            //     PaymentController::userDataUpdate($deposit);
+            // }
         }
         http_response_code(200);
     }
