@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
+use App\Mail\FreeTrialMail;
 use App\Mail\ProposalMail;
 use App\Models\PathServices;
 use Illuminate\Http\Request;
@@ -126,6 +127,20 @@ class IndexController extends Controller
         $title = 'Free Trail';
         $pathServices = PathServices::where('status', 'active')->get();
         return  view('free-trail',compact('title','pathServices'));
+    }
+    public function sendFreeTrailMail(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|min:3',
+            'email' => 'required|email',
+            'phone' => 'required|string',
+            'quantity' => 'required|integer',
+            'service' => 'required',
+            'instruction' => 'required',
+        ]); 
+        $data = $request->all();
+        Mail::to('info@pixclipping.com')->send(new FreeTrialMail($data)); 
+        return redirect()->back();
     }
 
     public function portfolio()

@@ -38,7 +38,7 @@
                     <div style="background: #fff;">
                         <div class="card-title text-center" style="padding: 20px; background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(136,3,9,1) 0%, rgba(9,54,131,1) 100%);color: #fff; font-size: 22px; font-weight: 500;">Your Contact Info</div>
                         <div class="card-body" style="padding: 20px">
-                            <form class="free-trail-form" action="" method="POST">
+                            <form class="free-trail-form" action="{{route('send.free-trail')}}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-6 py-0 px-1">
@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="col-12 py-1 px-1">
                                         <label for="service" class="form-label"> Services <span style="color:red">*</span></label>
-                                        <select class="" name="service">
+                                        <select class="form-control" name="service">
                                             <option>Select Service</option>
                                             @isset($pathServices)
                                                 @foreach($pathServices as $pathService)

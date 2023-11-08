@@ -28,6 +28,7 @@ Route::get('/price/service-name',[IndexController::class,'servicePrice'])->name(
 Route::get('/workflow', [IndexController::class,'workflow'])->name('workflow');
 Route::get('/portfolio', [IndexController::class,'portfolio'])->name('portfolio');
 Route::get('/free-trail', [IndexController::class,'freeTrail'])->name('free-trail');
+Route::post('/send/free-trail',[IndexController::class,'sendFreeTrailMail'])->name('send.free-trail');
 Route::patch('/free-trail', [IndexController::class,'sendFreeTrail'])->name('free-trail');
 Route::get('/services/{slug}', [IndexController::class,'singleService'])->name('services.slug');
 Route::get('/faq', [IndexController::class,'faq'])->name('faq');
