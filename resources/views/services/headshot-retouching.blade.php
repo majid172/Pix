@@ -13,7 +13,7 @@
                             <h2 class="text-secondary">Achieve Your Preferred 
                                 <span class="text">Headshot</span></h2>
                             <p>@lang('Our goal is to enhance your natural features, ensuring you exude confidence and elegance. Share your preferences, and we\'ll work our magic in no time!')</p>
-                            <a href="#" target="_blank" class="btn primary-button d-inline-block me-2">FREE TRAIL <i class="las la-angle-right"></i></a>
+                            <a href="{{route('free-trail')}}" target="_blank" class="btn primary-button d-inline-block me-2">FREE TRAIL <i class="las la-angle-right"></i></a>
                             <a href="{{route('home')}}" target="_blank" class="btn get_start_btn border-1 d-inline-block">@lang('GET STARTED') <i class="las la-angle-right"></i></a>
                         </div>
                     </div>

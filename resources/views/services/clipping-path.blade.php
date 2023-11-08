@@ -16,7 +16,7 @@
 
                                 ') : <span class="text">@lang('Maintain a precise edge')</span></h2>
                             <p>@lang('Unlock the ability to separate subjects from images as needed. Our skilled professionals accurately cut out single or group subjects, delivering exceptional results in record time!')</p>
-                            <a href="#" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
+                            <a href="{{route('free-trail')}}" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
                             <a href="{{route('home')}}" target="_blank" class="btn get_start_btn border-1 d-inline-block">@lang('GET STARTED') <i class="las la-angle-right"></i></a>
                         </div>
                     </div>
@@ -385,8 +385,8 @@
                         <a href="#" class="smooth-anchor btn mx-auto primary-button"><i class="las la-arrow-circle-right"></i>@lang('See Sample')</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 align-self-center text-center item">
-                    <div class="card-box pricing">
+                <div class="col-12 col-md-6 col-lg-4 align-self-center  text-center item">
+                    <div class="card-box bg-primary pricing">
                         <img src="{{asset('front-assets/images/background_remove/price icon/medium.png')}}" class="icon" alt="pricing icon">
                         <h4>@lang('Medium')</h4>
                         <span class="price">@lang('$0.70 - $2.99')</span>

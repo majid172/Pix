@@ -38,26 +38,27 @@
                     <div style="background: #fff;">
                         <div class="card-title text-center" style="padding: 20px; background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(136,3,9,1) 0%, rgba(9,54,131,1) 100%);color: #fff; font-size: 22px; font-weight: 500;">Your Contact Info</div>
                         <div class="card-body" style="padding: 20px">
-                            <form class="free-trail-form">
+                            <form class="free-trail-form" action="" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-6 py-0 px-1">
                                         <label for="name" class="form-label">Name <span style="color:red">*</span></label>
-                                        <input type="text" class="form-control" placeholder="Your Name" required name="name">
+                                        <input type="text" name="name" class="form-control" placeholder="Your Name" required name="name">
                                     </div>
                                     <div class="col-6 p-0">
                                         <label for="email" class="form-label">Email <span style="color:red">*</span></label>
-                                        <input type="email" class="form-control" placeholder="your@example.com" required name="email">
+                                        <input type="email" name="email" class="form-control" placeholder="your@example.com" required name="email">
                                     </div>
                                     <div class="col-6 py-1 px-1">
-                                        <label for="phone" class="form-label">Phone <span style="color:red">*</span></label>
-                                        <input type="number" class="form-control" placeholder="Phone" required name="phone">
+                                        <label for="phone"  class="form-label">Phone <span style="color:red">*</span></label>
+                                        <input type="number" name="phone" class="form-control" placeholder="Phone" required name="phone">
                                     </div>
                                     <div class="col-6 py-1 px-1">
                                         <label for="image_qty" class="form-label">Image Quantity <span style="color:red">*</span></label>
-                                        <input type="number" class="form-control" placeholder="100" required name="image_qty">
+                                        <input type="number" name="quantity" class="form-control" placeholder="100" required name="image_qty">
                                     </div>
                                     <div class="col-12 py-1 px-1">
-                                        <label for="service" class="form-label">Image Quantity <span style="color:red">*</span></label>
+                                        <label for="service" class="form-label"> Services <span style="color:red">*</span></label>
                                         <select class="" name="service">
                                             <option>Select Service</option>
                                             @isset($pathServices)
@@ -69,7 +70,7 @@
                                     </div>
                                     <div class="col-12 py-1 px-1">
                                         <label for="instruction" class="form-label">Instruction <span style="color:red">*</span></label>
-                                        <textarea class="form-control" placeholder="Hi, have a nice day..." required name="instruction"></textarea>
+                                        <textarea class="form-control" name="instruction" placeholder="Hi, have a nice day..." required name="instruction"></textarea>
                                     </div>
                                     <div class="col-6 py-1 px-1">
                                         <label for="file" class="form-label">Image</label>
@@ -78,7 +79,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 p-0 input-group align-self-center">
-                                        <button type="button" class="btn primary-button free-trail-submit-btn"><i class="icon-rocket"></i>Submit</button>
+                                        <button type="submit" class="btn primary-button free-trail-submit-btn"><i class="las la-rocket"></i>Submit</button>
                                     </div>
                                 </div>
                             </form>

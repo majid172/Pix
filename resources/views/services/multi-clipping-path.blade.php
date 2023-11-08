@@ -12,11 +12,9 @@
                     <div class="row intro">
                         <div class="col-12 p-0">
                             <h3 class="featured alt" style="opacity: 0.7; font-weight: 500;">{{isset($title)?$title :''}} Services</h3>
-                            <h2 class="text-secondary">@lang('Effortlessly Isolate Subjects with Precision
-
-                                ') : <span class="text">@lang('Maintain a precise edge')</span></h2>
+                            <h2 class="text-secondary">@lang('Effortlessly Isolate Subjects with Precision ') : <span class="text">@lang('Maintain a precise edge')</span></h2>
                             <p>@lang('Unlock the ability to separate subjects from images as needed. Our skilled professionals accurately cut out single or group subjects, delivering exceptional results in record time!')</p>
-                            <a href="#" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
+                            <a href="{{route('free-trail')}}" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
                             <a href="{{route('home')}}" target="_blank" class="btn get_start_btn border-1 d-inline-block">@lang('GET STARTED') <i class="las la-angle-right"></i></a>
                         </div>
                     </div>

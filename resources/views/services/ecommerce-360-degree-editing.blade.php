@@ -13,7 +13,7 @@
                             <h2 class="text-light">@lang('Introducing Affordable') : <span class="text">@lang('
                                     Amazon e-Bay Shopify Service')</span></h2>
                             <p class="text-light">@lang('Experience flawless image masking with us! Effortlessly extract intricate elements like hairs and furs. Seamlessly integrate subjects into any background. Elevate your editing game now!')</p>
-                            <a href="#" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
+                            <a href="{{route('free-trail')}}" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
                             <a href="{{route('home')}}" target="_blank" class="btn get_start_btn border-1 d-inline-block text-light">@lang('GET STARTED') <i class="las la-angle-right"></i></a>
                         </div>
                     </div>

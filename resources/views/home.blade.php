@@ -26,8 +26,8 @@
     <section id="featured" class="section-1  bg-white offers">
         <div class="container">
             <div class="row items">
-                <div class="col-12 col-md-6 col-lg-4 item ">
-                    <div class="card no-hover text-center">
+                <div class="col-12 col-md-6 col-lg-4 item">
+                    <div class=" text-center">
                         <i class="icon las la-calendar"></i>
                         <h5>@lang('Customised Editing')</h5>
                         <p>@lang('Get precise, customised photo editing services that meet your exact specifications ')
@@ -35,21 +35,18 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 item">
-                    <div class="card no-hover text-center">
+                    <div class="text-center">
                         <i class="icon las la-clock"></i>
                         <h5>Simple Dashboard</h5>
-                        <p>@lang('Effortlessly Manage Your Orders in One Convenient Location
-                            ')
+                        <p>@lang('Effortlessly Manage Your Orders in One Convenient Location')
                         </p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 item">
-                    <div class="card no-hover text-center">
-
+                    <div class="text-center">
                         <i class="icon lab la-uniregistry"></i>
                         <h5>@lang('Instant Support')</h5>
-                        <p class="text-center">@lang('Connect with Our Rapid-Response Support Representative in Just 10 Seconds
-                            ')
+                        <p class="text-center">@lang('Connect with Our Rapid-Response Support Representative in Just 10 Seconds')
                         </p>
                     </div>
                 </div>

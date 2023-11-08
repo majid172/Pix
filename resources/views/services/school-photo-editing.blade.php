@@ -17,7 +17,7 @@
                                 Superior Quality, Fast Results')</span></h2>
                             <p class="text-light paragraph">@lang('Enhance school portraits and group photos effortlessly. Our expert retouching saves you time, masking images, eliminating halos, precise cropping, and more.
                                 ')</p>
-                            <a href="#" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
+                            <a href="{{route('free-trail')}}" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
                             <a href="{{route('home')}}" target="_blank" class="btn get_start_btn border-1 d-inline-block">@lang('GET STARTED') <i class="las la-angle-right"></i></a>
                         </div>
                     </div>
@@ -284,12 +284,12 @@
                         
                       <div class="side-box price_box py-5">
                         <div>
-                               <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">$0.79</h1>
+                               <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">$0.15</h1>
                             <p>@lang('as low as')</p>
                         </div>
                         <hr>
                         <p class="price-text">@lang('Transform your product photos with us and experience 100% satisfaction. Start recoloring today!')</p>
-                        <a href="#" class="price_free_trial">@lang('Free Trial') <i class="las la-angle-double-right" style="font-size:20px"></i></a>
+                        <a href="{{route('free-trail')}}" target="_blank" class="price_free_trial">@lang('Free Trial') <i class="las la-angle-double-right" style="font-size:20px"></i></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6">

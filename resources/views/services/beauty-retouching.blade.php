@@ -11,7 +11,7 @@
                             <h2 class="text-light">@lang('Beauty Retouching Services') : <span class="text-warning">@lang('Natural Aesthetics')</span></h2>
                             <p class="paragraph text-light">@lang('Enhance your photos with our beauty retouching services. Captivate viewers with stunning details and breathtaking imagery.
                                 ')</p>
-                            <a href="#" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
+                            <a href="{{route('free-trail')}}" target="_blank" class="btn primary-button d-inline-block me-2">@lang('FREE TRAIL') <i class="las la-angle-right"></i></a>
                             <a href="{{route('home')}}" target="_blank" class="btn get_start_btn border-1 d-inline-block btn-outline-warning text-light">@lang('GET STARTED') <i class="las la-angle-right"></i></a>
                         </div>
                     </div>

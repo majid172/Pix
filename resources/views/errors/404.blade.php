@@ -4,10 +4,10 @@
 	<hr>
 	<div>Page Not Found</div>
   </div>
-  
+{{--   
   <div class="astronaut">
-	<img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" alt="" class="src">
-  </div>
+	<img src="{{asset('assets/images/error/moon.webp')}}" alt="" class="src">
+  </div> --}}
 
   <style>
 	body{
