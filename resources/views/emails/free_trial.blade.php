@@ -10,7 +10,8 @@
         <div class="data">
             <ul>
                 <li><strong>@lang('Name') : </strong> {{$data['name']}} </li>
-                <li><strong>@lang('Email') : </strong> {{$data['email']}} ({{$data['phone']}}) </li>
+                <li><strong>@lang('Email') : </strong> {{$data['email']}}  </li>
+                <li><strong>@lang('Contact Number') : </strong> {{$data['phone']}} </li>
                 <li><strong>@lang('Service') : </strong> {{$data['service']}} (Quantity:{{$data['quantity']}}) </li>
                
             </ul>

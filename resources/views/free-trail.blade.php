@@ -5,7 +5,7 @@
 @stop
 @section('content')
     <!-- Hero part-->
-    <section class="bg-white highlights image-right" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,96,198,1) 0%, rgba(9,54,131,1) 100%);position: relative;top: 86px;">
+    <section class="bg-white highlights image-right" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,96,198,1) 0%, rgba(9,54,131,1) 100%);position: relative;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-md-6">
@@ -63,7 +63,7 @@
                                             <option>Select Service</option>
                                             @isset($pathServices)
                                                 @foreach($pathServices as $pathService)
-                                                    <option value="{{$pathService->id}}">{{$pathService->service_name}}</option>
+                                                    <option value="{{$pathService->service_name}}">{{$pathService->service_name}}</option>
                                                 @endforeach
                                             @endisset
                                         </select>

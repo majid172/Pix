@@ -505,7 +505,7 @@
     </section>
 
 
-        <section id="pricing " class="section-1 plans">
+    <section id="pricing " class="section-1 plans">
         <div class="container">
             <div class="row text-center intro">
                 <div class="col-12 heading">
@@ -517,8 +517,8 @@
                 <div class="col-12 col-md-6 col-lg-4 align-self-center text-center item">
                     <div class="card-box pricing">
                         <img src="{{asset('front-assets/images/price_icon/free.png')}}" alt="price_icon" style="width: 50px;">
-                        <h4 class="text-secondary">@lang('Free')</h4>
-                        <span class="price text-primary">@lang('$0.00')</span>
+                        <h4 class="text-secondary">@lang('Trial')</h4>
+                        <span class="price text-primary">@lang('Free')</span>
                         <ul class="list-group list-group-flush mt-4">
                             <li class="list-group-item d-flex justify-content-between align-items-center text-left">
                                 <span>@lang('Les design and simple edge')</span>
@@ -543,14 +543,15 @@
                             </li>
 
                         </ul>
-                        <a href="#" class="smooth-anchor btn mx-auto primary-button"><i class="las la-arrow-circle-right"></i>@lang('See Sample')</a>
+                    
+                        <a href="{{route('free-trail')}}" class="btn mx-auto primary-button"><i class="las la-arrow-circle-right"></i>@lang('Get Free Trial')</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 align-self-center text-center item">
-                    <div class="card-box pricing">
-                        <img src="{{asset('front-assets/images/price_icon/medium.png')}}" alt="price_icon" style="width: 50px;">
-                        <h4 class="text-secondary">@lang('As Low As')</h4>
-                        <span class="price text-primary">@lang('$5.00 - $8.99')</span>
+                    <div class="card-box pricing" id="middle_card">
+                        <img src="{{asset('front-assets/images/price_icon/low.png')}}" alt="price_icon" style="width: 50px;">
+                        <h4 class="text-light">@lang('As Low As')</h4>
+                        <span class="price text-light">@lang('$0.29') / Image</span> 
                         <ul class="list-group list-group-flush mt-4">
                             <li class="list-group-item d-flex justify-content-between align-items-center text-left">
                                 <span>@lang('Curvy design')</span>
@@ -574,14 +575,15 @@
                             </li>
 
                         </ul>
-                        <a href="{{route('login')}}" class="smooth-anchor btn mx-auto primary-button"><i class="las la-arrow-circle-right"></i>@lang('See Sample')</a>
+                        <a href="{{route('home')}}" class="btn btn-warning mx-auto"><i class="las la-arrow-circle-right"></i>@lang('Order Now')</a>
+                        {{-- <a href="{{route('home')}}" class="smooth-anchor btn mx-auto btn-warning"><i class="las la-arrow-circle-right"></i>@lang('Order Now')</a> --}}
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 align-self-center text-center item">
-                    <div class="card-box pricing">
-                        <img src="{{asset('front-assets/images/price_icon/complex.png')}}" alt="price_icon" style="width: 50px;">
+                    <div class="card-box pricing" >
+                        <img src="{{asset('front-assets/images/price_icon/high.png')}}" alt="price_icon" style="width: 50px;">
                         <h4 class="text-secondary">@lang('Large Volumn')</h4>
-                        <span class="price text-primary">@lang('Talk to us')</span>
+                        <span class="price text-primary">@lang('Project')</span>
                         <ul class="list-group list-group-flush mt-4">
                             <li class="list-group-item d-flex justify-content-between align-items-center text-left">
                                 <span>@lang('Large Volumn')</span>
@@ -604,7 +606,7 @@
                                 <i class="icon-min m-0 las la-check-circle text-right"></i>
                             </li>
                         </ul>
-                        <a href="{{route('contact')}}" class="smooth-anchor btn mx-auto primary-button"><i class="las la-arrow-circle-right"></i>@lang('See Sample')</a>
+                        <a href="{{route('project.proposal')}}" class=" btn mx-auto primary-button"><i class="las la-arrow-circle-right"></i>@lang('Project Proposal')</a>
                     </div>
                 </div>
             </div>
@@ -728,6 +730,19 @@
     @include('action-blog')
 @endsection
 
+@push('style')
+    <style>
+        #middle_card{
+           background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,96,198,1) 0%, rgba(9,54,131,1) 100%);
+        }
+        #middle_card li{
+            color: white !important;
+        }
+        #middle_card .price{
+            border-color: #fff !important;
+        }
+    </style>
+@endpush
 @section('page-script')
     <script>
         $(function (){

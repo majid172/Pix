@@ -386,11 +386,11 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 align-self-center  text-center item">
-                    <div class="card-box bg-primary pricing">
+                    <div class="card-box pricing" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,96,198,1) 0%, rgba(9,54,131,1) 100%); color:white !important;">
                         <img src="{{asset('front-assets/images/background_remove/price icon/medium.png')}}" class="icon" alt="pricing icon">
                         <h4>@lang('Medium')</h4>
                         <span class="price">@lang('$0.70 - $2.99')</span>
-                        <ul class="list-group list-group-flush mt-3">
+                        <ul class="list-group list-group-flush mt-3" id="middle_card">
                             <li class="list-group-item d-flex justify-content-between align-items-center text-left">
                                 <span>@lang('Curvy design')</span>
                                 <i class="icon-min m-0 las la-check-circle text-right"></i>
@@ -413,7 +413,7 @@
                             </li>
     
                         </ul>
-                        <a href="{{route('login')}}" class="smooth-anchor btn mx-auto primary-button"><i class="las la-arrow-circle-right"></i>@lang('See Sample')</a>
+                        <a href="{{route('login')}}" class="smooth-anchor btn mx-auto primary-button" style="background:white; color:#073277"><i class="las la-arrow-circle-right"></i>@lang('See Sample')</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 align-self-center text-center item">
@@ -582,6 +582,9 @@ height: 200px;
   color: #000;
 }
 
+#middle_card li{
+    color: white;
+}
     </style>
 
 @endpush
