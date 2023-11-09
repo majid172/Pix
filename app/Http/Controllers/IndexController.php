@@ -7,6 +7,7 @@ use App\Mail\FreeTrialMail;
 use App\Mail\ProposalMail;
 use App\Models\PathServices;
 use Illuminate\Http\Request;
+use App\Helpers\Helper;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
@@ -31,6 +32,7 @@ class IndexController extends Controller
      */
     public function index()
     {
+        dd(getTrx());
         return  view('home');
     }
 

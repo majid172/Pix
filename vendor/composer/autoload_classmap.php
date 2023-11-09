@@ -43,6 +43,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\UserCreateUserRequest' => $baseDir . '/app/Http/Requests/UserCreateUserRequest.php',
     'App\\Mail\\ContactMail' => $baseDir . '/app/Mail/ContactMail.php',
+    'App\\Mail\\FreeTrialMail' => $baseDir . '/app/Mail/FreeTrialMail.php',
     'App\\Mail\\ProposalMail' => $baseDir . '/app/Mail/ProposalMail.php',
     'App\\Models\\BillingAddress' => $baseDir . '/app/Models/BillingAddress.php',
     'App\\Models\\Country' => $baseDir . '/app/Models/Country.php',

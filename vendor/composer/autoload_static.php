@@ -39,7 +39,7 @@ class ComposerStaticInit3c61b8ef77dc0aedebf3f8ff82d16aea
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
         '0b47d6d4a00ca9112ba3953b49e7c9a4' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/helper.php',
-        '8fde5feda9697fe0ee53a3938c839fb0' => __DIR__ . '/../..' . '/app/Helpers/Helper.php',
+        'd21d43db5f6e840ee7b10744ec7fdf66' => __DIR__ . '/../..' . '/app/Helpers/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -596,6 +596,7 @@ class ComposerStaticInit3c61b8ef77dc0aedebf3f8ff82d16aea
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\UserCreateUserRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UserCreateUserRequest.php',
         'App\\Mail\\ContactMail' => __DIR__ . '/../..' . '/app/Mail/ContactMail.php',
+        'App\\Mail\\FreeTrialMail' => __DIR__ . '/../..' . '/app/Mail/FreeTrialMail.php',
         'App\\Mail\\ProposalMail' => __DIR__ . '/../..' . '/app/Mail/ProposalMail.php',
         'App\\Models\\BillingAddress' => __DIR__ . '/../..' . '/app/Models/BillingAddress.php',
         'App\\Models\\Country' => __DIR__ . '/../..' . '/app/Models/Country.php',

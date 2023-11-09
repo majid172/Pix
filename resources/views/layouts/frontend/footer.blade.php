@@ -108,7 +108,7 @@
                      -->
                 </div>
                 <div class="col-12 col-md-6 p-3 text-center text-lg-right">
-                    <p>© {{date('Y')}} Powered by <a href="{{route('home')}}" target="_blank" style="color:#f8ed4a">PIX CLIPPING LTD</a>.</p>
+                    <p>© {{date('Y')}} Powered by <a href="{{route('home')}}" target="_blank" style="color:#ffc107">PIX CLIPPING LTD</a>.</p>
                 </div>
             </div>
         </div>
@@ -118,13 +118,13 @@
 
 <style>
     #message_btn a{
-        border: 2px solid  #f8ed4a;
-        color: #f8ed4a;
+        border: 2px solid  #ffc107;
+        color: #ffc107;
         padding: 15px 20px;
     }
 
     #message_btn a:hover{
-        background: #f8ed4a;
+        background: #ffc107;
         color: var(--primary-color);
     }
 </style>
